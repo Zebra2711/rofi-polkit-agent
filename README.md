@@ -15,6 +15,12 @@ Start the polkit agent with any additional argument passed directly to rofi :
 ```sh
 rofi-polkit-agent -theme PATH -monitor NUM
 ```
+<div align = center>
+
+![polkit](https://github.com/user-attachments/assets/125cccce-8881-4810-87c6-1a2f9c7d2af0)
+
+</div>
+
 
 ## Installation
 ### Arch AUR

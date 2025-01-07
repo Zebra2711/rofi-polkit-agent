@@ -25,7 +25,7 @@ else
 
     # Read incoming messages one by one (line by line)
     # from stdin to variable $msg
-    while read -r msg; do
+    while read -s msg; do
         #  --- shellcheck disable=SC2210
         if echo "$msg" | jq -e '.action == "request password"' 1>/dev/null 2>/dev/null
         then
@@ -34,16 +34,14 @@ else
             message="$(printf '%s' "$msg" | jq -rc '.message // "No message given!"')"
 
             # Request a password prompt from rofi
-            response="$(printf '' | rofi  -dmenu -p "$prompt" \
+            response="$(printf '' | rofi  -dmenu -p "󰌆 " \
                 -mesg "$message" -password -no-fixed-num-lines "$@")"
-
             # Cancel authentication if no password was given,
             # otherwise respond with given password
-            if test -z "$response"
+	    if test -z "$response"
             then echo '{"action":"cancel"}'
             else echo "{\"action\":\"authenticate\",\"password\": \"$response\"}"
             fi
         fi
     done
 fi
-

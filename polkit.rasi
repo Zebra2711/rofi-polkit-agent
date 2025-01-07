@@ -1,0 +1,58 @@
+* {
+    background-color:   transparent;
+    text-color:         #2bff00;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       center;
+    width:          370;
+    border-radius:  24px;
+    
+    background-color:   #ff0000;
+}
+
+mainbox {
+    padding:    7px;
+}
+
+inputbar {
+    background-color:   #000000;
+    border-color:       #05f72d;
+
+    border:         2px;
+    border-radius:  16px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    font: "FiraCode Nerd Font 17";
+    text-color: #ffff00;
+}
+
+entry {
+    font: "FiraCode Nerd Font 17";
+    placeholder:        "";
+    placeholder-color:  #2bff00;
+}
+
+
+/* ============ WARRING ============ */
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       #2bff00;
+    background-color:   #25014a;
+}
+
+textbox {
+    font: "FiraCode Nerd Font 11";
+    padding:    8px 24px;
+}
+/* ============ ======= ============ */
