@@ -38,7 +38,9 @@ prompt {
 
 entry {
     font: "FiraCode Nerd Font 17";
-    placeholder:        "";
+    placeholder: "Enter password";
+    cursor-width: 2px;
+    password-mask:       "●";
     placeholder-color:  #2bff00;
 }
 
